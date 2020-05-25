@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "3a7db631-f4fb-4235-ba2c-7260682c5a3c",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "78e07765-d21c-46d2-8e7a-8ad21cd84e4c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Board should be created\", function (){\r",
+							"    pm.expect(jsonData.name).to.eql(\"teste\");\r",
+							"});\r",
+							"\r",
+							"console.log(jsonData);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=teste&key=af16608c851ca07ad6d9efb226a130c5&token=2380fd5c9ba994e3b0cf0545cccf01b13e817d4e8ccdd1b360e71fde90e27b2a&defaultLists=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "teste"
+						},
+						{
+							"key": "key",
+							"value": "af16608c851ca07ad6d9efb226a130c5"
+						},
+						{
+							"key": "token",
+							"value": "2380fd5c9ba994e3b0cf0545cccf01b13e817d4e8ccdd1b360e71fde90e27b2a"
+						},
+						{
+							"key": "defaultLists",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/:board_id?key=af16608c851ca07ad6d9efb226a130c5&token=2380fd5c9ba994e3b0cf0545cccf01b13e817d4e8ccdd1b360e71fde90e27b2a",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						":board_id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "af16608c851ca07ad6d9efb226a130c5"
+						},
+						{
+							"key": "token",
+							"value": "2380fd5c9ba994e3b0cf0545cccf01b13e817d4e8ccdd1b360e71fde90e27b2a"
+						}
+					],
+					"variable": [
+						{
+							"key": "board_id",
+							"value": "5ecc34b97758e734d7cb0b55"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

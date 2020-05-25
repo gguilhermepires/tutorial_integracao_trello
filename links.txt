@@ -1,0 +1,17 @@
+
+
+// Raiz da api
+https://developer.atlassian.com/cloud/trello/
+
+// Referências da rest api (https requests)
+https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/
+
+// Onde pega a key 
+https://trello.com/app-key
+
+// Depois de pegar a key, tem que gerar um token na url
+https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=Server%20Token&key=af16608c851ca07ad6d9efb226a130c5
+//ou na url (no link escrito token)
+https://trello.com/app-key
+
+
