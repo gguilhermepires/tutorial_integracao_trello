@@ -1,7 +1,7 @@
 # tutorial_integracao_trello
 Tutorial de entegração do trelho
 
-Passo 1: criar conta no trello
+Passo 1: Criar conta no trello
 
 Passo 2: Criar a key
 
@@ -15,7 +15,7 @@ ou na url (no link escrito token)
 
 https://trello.com/app-key
 
-Passo 4: abrir a coleção do postman na pasta postman
+Passo 4: Abrir a coleção do postman na pasta postman
 
 Passo 5: Olhar a documentação 
 
